@@ -1042,7 +1042,7 @@ Plugin.prototype.arrow = function() {
 Plugin.prototype.arrowDisable = function(index) {
 
     // Disable arrows if s.hideControlOnEnd is true
-    if (!this.s.loop && this.s.hideControlOnEnd) {
+    if (!this.s.loop && this.s.hideControlOnEnd && this.___slide.length > 1) {
         let next = this.outer.querySelector('.lg-next');
         let prev = this.outer.querySelector('.lg-prev');
         if ((index + 1) < this.___slide.length) {
